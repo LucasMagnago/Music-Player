@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="style.css" rel="stylesheet">
+
+    <title>Music Player</title>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <header>
+            <img src="./assets/logo.png" alt="logo" width=50px>
+        </header>
+
+        <main>
+           
+            <img id="musicImage" src="./assets/musicImage/Péricles - Se eu largar o freio.jpg" alt="Péricles - Se eu largar o freio">
+            <div id="musicName">Péricles - Se eu largar o freio</div>
+            <audio id="player">
+                <source id="currentMusic" src="./musics/Péricles - Se eu largar o freio.mp3" type="audio/mpeg">
+            </audio>
+            <input class="bars" id="progressBar" type="range" name="posição" value=0 min=0>
+            <p id="timeDisplay"></p>
+        </main>
+
+        <footer>
+            <input class="bars" id="volumeBar" type="range" name="volume" value=0.5 min=0 max=1 step=0.1>
+            <div id="console">
+                <img class="buttons" id="slower" src="./assets/slower.png" alt="slower">
+                <img class="buttons" id="backward" src="./assets/backward.png" alt="backward">
+                <img class="buttons" id="before" src="./assets/before.png" alt="before">
+                <img class="buttons" id="playPause" src="./assets/play.png" alt="play">
+                <img class="buttons" id="next" src="./assets/next.png" alt="next">
+                <img class="buttons" id="stop" src="./assets/stop.png" alt="stop">
+                <img class="buttons" id="forward" src="./assets/forward.png" alt="forward">
+                <img class="buttons" id="faster" src="./assets/faster.png" alt="faster">
+                <img class="buttons" id="volume" src="./assets/volume.png" alt="volume">
+            </div>
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
