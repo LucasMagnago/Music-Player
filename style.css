@@ -7,47 +7,43 @@ body{
     color:white;
 }
 .container{
-    display:flex;
+    display: flex;
     flex-direction: column;
-
 }
 header{
     background-color: #262525;
     height: 100px;
     box-sizing: border-box;
-    padding:25px;
+    padding: 25px;
 }
 main{
     display:flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: #262525;
-    padding-top: 50px;
-    padding-bottom: 41px;
-    box-sizing: border-box;
-}
-#musicName{
-    font-size: 25px;
-    font-family:cursive;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 #musicImage{
     width: 400px;
     height: 400px;
     border-radius: 20px;
 }
+#musicName{
+    font-size: 25px;
+    font-family:cursive;
+    margin-top: 20px;
+    margin-bottom: 71px;
+}
 #progressBar{
-    position: relative;
-    top: 62px;
+    align-self: center;
     width: 100%;
     
 }
 #timeDisplay{
     color:black;
     position: relative;
-    top: 44px;
+    top: 15px;
 }
 footer{
     display: flex;
@@ -56,8 +52,6 @@ footer{
     align-items: center;
     background-color: #0C0B0B;
     height: 109px;
-    padding-top: 37px;
-    padding-bottom: 37px;
     box-sizing: border-box;
 }
 #volumeBar{
@@ -83,4 +77,30 @@ footer{
 #volume{
     position: relative;
     left:150px;
+}
+
+@media screen and (max-width: 375px){
+    
+    main{
+        text-align: center;
+    }
+    #musicImage{
+        max-width: 300px;
+        max-height: 300px;
+        border-radius: 20px;
+    }
+    footer{
+        flex-flow:row wrap;
+    }
+    #console{
+        flex-wrap:wrap;
+    }
+    #volumeBar{
+        position:relative;
+        left: -123px;
+        bottom: 30px;
+    }
+    #volume{
+        left:15px;
+    }
 }
