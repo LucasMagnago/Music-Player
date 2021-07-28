@@ -40,7 +40,7 @@ function anterior(){
         musicName.innerHTML = musics[musicIndex];
     }
     else{
-        musicIndex -= 1
+        musicIndex -= 1;
         player.src = "musics/" + musics[musicIndex] + ".mp3";
         musicName.innerHTML = musics[musicIndex];
     }
@@ -98,11 +98,9 @@ function mutarDesmutar(){
 function posicionar(){
     player.currentTime = progressBar.value;
 }
-
-
 function atualizarTempo(){
     progressBar.value = player.currentTime;
-    progressBar.setAttribute = ("max", player.duration);
+    progressBar.max = player.duration;
 }
 window.setInterval(atualizarTempo, 1000);
 
