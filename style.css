@@ -71,7 +71,7 @@ main{
 
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 450px){
     
     header{
         text-align: center;
@@ -88,6 +88,24 @@ main{
     #musicName{
         margin-top: 0px;
     }
+    #slower{
+        display: none;
+    }
+    #backward{
+        display: none;
+    }
+    #forward{
+        display: none;
+    }
+    #faster{
+        display: none;
+    }
+    #stop{
+        display: none;
+    }
+    #volume{
+        display:none;
+    }
     #console{
         flex-flow:row wrap;
         align-items: center;
@@ -99,7 +117,7 @@ main{
     }
     #timeDisplay{
         position:absolute;
-        top:81vh;
+        top:80.5vh;
         right:0vh;
         color:white;
     }

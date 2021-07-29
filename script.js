@@ -23,8 +23,8 @@ stoper.addEventListener("click", toStop);
 forward.addEventListener("click", avancar);
 faster.addEventListener("click", acelerar);
 volume.addEventListener("click", mutarDesmutar);
-progressBar.addEventListener("click", posicionar)
-volumeBar.addEventListener("click", changeVolume);
+progressBar.addEventListener("change", posicionar)
+volumeBar.addEventListener("change", changeVolume);
 
 let musicIndex = 0;
 
