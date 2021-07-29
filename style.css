@@ -1,3 +1,10 @@
+@keyframes changeColor{
+    from{box-shadow: 10px 10px  5px black}
+    25%{box-shadow: 10px 10px  5px rgb(235, 37, 37)}
+    50%{box-shadow: 10px 10px  5px rgb(248, 252, 39)}
+    75%{box-shadow: 10px 10px  5px rgb(57, 45, 230)}
+    to{box-shadow: 10px 10px  5px rgb(167, 35, 207)}
+}
 *{
     margin:0px;
     padding:0px;
@@ -34,6 +41,12 @@ main{
     max-width: 400px;
     max-height: 400px;
     border-radius: 20px;
+    box-shadow: 10px 10px 5px black;
+    animation-name: changeColor;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
 }
 #musicName{
     font-size: 25px;
@@ -98,5 +111,4 @@ main{
         right:0vh;
         color:white;
     }
-    
 }
