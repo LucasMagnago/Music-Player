@@ -1,4 +1,4 @@
-let musics = ["Péricles - Se eu largar o freio", "Grupo Revelação - Deixa Acontecer  Coração Radiante  Compasso Do Amor", "Arlindo Cruz - Meu Lugar"];
+let musics = ["Game of Thrones - Main Theme", "Game of Thrones - House Targaryen Theme", "Game of Thrones - House Lannister Theme", "Game of Thrones - House Stark Theme"];
 let player = document.getElementById("player");
 let slower = document.getElementById("slower");
 let backward = document.getElementById("backward");
@@ -38,12 +38,16 @@ function anterior(){
     if(musicIndex == 0){
         player.currentTime = 0;
         musicName.innerHTML = musics[musicIndex];
+        musicImage = "./assets/musicImage/" + musics[musicIndex] + ".jpg"
     }
     else{
         musicIndex -= 1;
         player.src = "musics/" + musics[musicIndex] + ".mp3";
         musicName.innerHTML = musics[musicIndex];
+        musicImage.src = "./assets/musicImage/" + musics[musicIndex] + ".jpg"
     }
+
+    tocar();
 }
 function tocar(){
     if(player.paused){
@@ -56,7 +60,7 @@ function tocar(){
     }
 }
 function proxima(){
-    if(musicIndex == 2){
+    if(musicIndex == (musics.length - 1)){
         musicIndex = 0;
         player.src = "./musics/" + musics[musicIndex] + ".mp3";
         musicImage.src = "./assets/musicImage/" + musics[musicIndex] + ".jpg";
@@ -68,7 +72,8 @@ function proxima(){
         musicImage.src = "./assets/musicImage/" + musics[musicIndex] + ".jpg";
         musicName.innerHTML = musics[musicIndex];
     }
-    player.play();
+    
+    tocar();
 }
 function toStop(){
     musicIndex = 0;
